@@ -245,7 +245,7 @@ const Nodes = () => {
       }
     };
 
-    if (nodesNumber.data && nodesNumber.data.length > 0 && nodesStates.data) {
+    if (nodesNumber.data && nodesStates.data) {
       fetchData(nodesNumber.data, nodesStates.data);
     }
 
