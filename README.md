@@ -1,6 +1,6 @@
 <div style="text-align:center">
   <img
-  src="https://github.com/ElrondNetwork/delegation-dashboard.elrond.com/blob/master/preview.png "
+  src="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/blob/master/preview.png "
   alt="Elrond Network">
 </div>
 <br>
@@ -18,9 +18,9 @@ The react implementation for Dashboard Delegation
     <br />
     <br />
     ·
-    <a href="https://github.com/ElrondNetwork/delegation-dashboard.elrond.com/issues">Report Bug</a>
+    <a href="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ElrondNetwork/delegation-dashboard.elrond.com/issues">Request Feature</a>
+    <a href="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues">Request Feature</a>
   </p>
 </p>
 
@@ -102,7 +102,7 @@ To run the project locally run `npm run start` from the project folder. This wil
 
 ## Roadmap
 
-See the [open issues](https://github.com/ElrondNetwork/delegation-dashboard.elrond.com/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -120,4 +120,4 @@ One can contribute by creating _pull requests_, or by opening _issues_ for disco
 
 ## Developers
 
-The [RisaSoft Team](https://twitter.com/risasoftstaking).
+The [RisaSoft Team](https://twitter.com/risa_staking).
