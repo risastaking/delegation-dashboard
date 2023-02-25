@@ -1,5 +1,5 @@
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
-import { sendTransactions } from "@multiversx/sdk-dapp"
+import { sendTransactions } from '@multiversx/sdk-dapp/services';
 import { getChainID, parseAmount } from '@multiversx/sdk-dapp/utils';
 import {
   ProxyNetworkProvider,

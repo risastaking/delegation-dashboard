@@ -5,7 +5,7 @@ import {
   useGetAccountInfo,
   useGetActiveTransactionsStatus
 } from '@multiversx/sdk-dapp/hooks';
-import { sendTransactions } from '@multiversx/sdk-dapp';
+import { sendTransactions } from '@multiversx/sdk-dapp/services';
 import {
   Address,
   AddressValue,
