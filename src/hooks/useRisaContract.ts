@@ -67,8 +67,10 @@ const useRisaContract = () => {
       .withValue('0')
       .withGasLimit(6000000)
       .withChainID(chainID.valueOf())
-      .buildTransaction();
+      .buildTransaction()
+      .toSendable();
 
+      tx.sender = new Address(account?.address)
     return await sendTransactions({
       transactions: [tx]
     });
@@ -81,7 +83,10 @@ const useRisaContract = () => {
       .withValue('0')
       .withGasLimit(6000000)
       .withChainID(chainID.valueOf())
-      .buildTransaction();
+      .buildTransaction()
+      .toSendable();
+      
+      tx.sender = new Address(account?.address)
 
     return await sendTransactions({
       transactions: [tx]
@@ -95,7 +100,10 @@ const useRisaContract = () => {
       .withValue('0')
       .withGasLimit(6000000)
       .withChainID(chainID.valueOf())
-      .buildTransaction();
+      .buildTransaction()
+      .toSendable();
+      
+      tx.sender = new Address(account?.address)
 
     return await sendTransactions({
       transactions: [tx]
