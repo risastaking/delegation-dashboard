@@ -65,7 +65,7 @@ const useTransaction = () => {
       });
 
       return await sendTransactions({
-        transactions: transaction
+        transactions: [transaction]
       });
     }
   };

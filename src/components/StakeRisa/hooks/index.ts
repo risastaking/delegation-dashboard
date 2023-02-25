@@ -75,10 +75,12 @@ const useStakeData = () => {
         .withNonce(account?.nonce)
         .withGasLimit(10000000)
         .withChainID(chainID)
-        .buildTransaction();
-
+        .buildTransaction()
+        .toSendable();
+        
+        tx.sender = new Address(account?.address)
       return await sendTransactions({
-        transactions: tx
+        transactions: [tx]
       });
     } catch (error) {
       console.error(error);
