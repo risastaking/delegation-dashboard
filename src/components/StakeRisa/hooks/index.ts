@@ -5,7 +5,7 @@ import {
   useGetAccountInfo,
   useGetActiveTransactionsStatus
 } from '@multiversx/sdk-dapp/hooks';
-import { sendTransactions } from '@multiversx/sdk-dapp/services';
+import { sendTransactions } from '@multiversx/sdk-dapp';
 import {
   Address,
   AddressValue,
@@ -78,7 +78,7 @@ const useStakeData = () => {
         .buildTransaction();
 
       return await sendTransactions({
-        transactions: tx
+        transactions: [tx]
       });
     } catch (error) {
       console.error(error);

@@ -1,5 +1,5 @@
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
-import { sendTransactions } from '@multiversx/sdk-dapp/services';
+import { sendTransactions } from "@multiversx/sdk-dapp"
 import { getChainID, parseAmount } from '@multiversx/sdk-dapp/utils';
 
 import {
@@ -65,7 +65,7 @@ const useTransaction = () => {
       });
 
       return await sendTransactions({
-        transactions: transaction
+        transactions: [transaction]
       });
     }
   };
