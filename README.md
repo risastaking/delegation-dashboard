@@ -1,6 +1,6 @@
 <div style="text-align:center">
   <img
-  src="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/blob/master/preview.png "
+  src="https://github.com/multiversx/delegation-dashboard.multiversx.com/blob/master/preview.png "
   alt="Elrond Network">
 </div>
 <br>
@@ -18,9 +18,9 @@ The react implementation for Dashboard Delegation
     <br />
     <br />
     ·
-    <a href="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues">Report Bug</a>
+    <a href="https://github.com/multiversx/delegation-dashboard.multiversx.com/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues">Request Feature</a>
+    <a href="https://github.com/multiversx/delegation-dashboard.multiversx.com/issues">Request Feature</a>
   </p>
 </p>
 
@@ -54,7 +54,7 @@ The react implementation for Dashboard Delegation
 
 The dapp is a client side only poject and is built using the Create React App scripts.
 
-Follow the next step to start using this dapp or follow the next tutorial on [Youtube](https://www.youtube.com/watch?v=BkjUmBsmQYM&feature=youtu.be&ab_channel=ElrondNetwork)
+Follow the next step to start using this dapp or follow the next tutorial on [Youtube](https://www.youtube.com/watch?v=BkjUmBsmQYM&feature=youtu.be&ab_channel=multiversx)
 
 ### Prerequisites
 
@@ -102,7 +102,7 @@ To run the project locally run `npm run start` from the project folder. This wil
 
 ## Roadmap
 
-See the [open issues](https://github.com/ElrondNetwork/delegation-dashboard.multiversx.com/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/multiversx/delegation-dashboard.multiversx.com/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 

@@ -1,18 +1,17 @@
-import React, { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-import { BLS } from '@multiversx/sdk-bls-wasm';
+import { BLS } from '@multiversx/sdk-wallet';
 import { faKey, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useFormikContext, FormikProps } from 'formik';
 import moment from 'moment';
 import { useDropzone } from 'react-dropzone';
-
 import { network } from '/src/config';
 import modifiable from '/src/helpers/modifiable';
 import decodeFile from './helpers';
-
 import * as styles from './styles.module.scss';
+
 export interface DropzoneFormType {
   files: Array<any>;
 }
@@ -63,7 +62,7 @@ const Dropzone = () => {
 
   const dropzone = useDropzone({
     multiple: true,
-    accept: '.pem',
+    accept: { 'application/x-pem-file': ['.pem'] },
     onDrop: async (files: any) => {
       try {
         await BLS.initIfNecessary();
