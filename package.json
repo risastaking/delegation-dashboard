@@ -14,7 +14,7 @@
     "build-testnet": "yarn copy-testnet-config && yarn build",
     "build-mainnet": "yarn copy-mainnet-config && yarn build",
     "test": "node scripts/test.js",
-    "copy-wasm": "mkdir dist && mkdir ./dist/node_modules && mkdir ./dist/node_modules/@multiversx && mkdir ./dist/node_modules/@multiversx/sdk-bls-wasm && cp ./public/bls_c.wasm ./dist/node_modules/@multiversx/sdk-bls-wasm/ && cp ./public/bls_c.wasm ./dist && cp ./public/.htaccess ./dist",
+    "copy-wasm": "mkdir dist && cp ./public/bls_c.wasm ./dist && cp ./public/.htaccess ./dist",
     "copy-testnet-config": "yarn copy-wasm && cp ./src/config.testnet.ts ./src/config.ts",
     "copy-mainnet-config": "yarn copy-wasm && cp ./src/config.mainnet.ts ./src/config.ts",
     "clean": "rm -rf ./dist",
