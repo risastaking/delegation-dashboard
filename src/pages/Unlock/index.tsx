@@ -118,7 +118,7 @@ const Unlock = () => {
             <ul style={{ textAlign: 'left' }}>
               <li style={{ paddingBottom: '1rem' }}>8-12% APR on your $EGLD</li>
               <li style={{ paddingBottom: '1rem' }}>
-                Up to 150% APR on your $RISA
+                Up to 75% APR on your $RISA
               </li>
               <li style={{ paddingBottom: '1rem' }}>
                 Airdropped $RISA (exclusive to our pool)
