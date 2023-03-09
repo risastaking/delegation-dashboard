@@ -98,7 +98,7 @@
     "dayjs": "1.11.7",
     "formik": "2.2.9",
     "moment": "2.29.4",
-    "parcel": "2.8.3",
+    "parcel": "2.8.1",
     "react": "18.2.0",
     "react-bootstrap": "1.6.6",
     "react-dom": "18.2.0",
@@ -114,9 +114,9 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.8.3",
-    "@parcel/transformer-sass": "2.8.3",
-    "@parcel/transformer-webmanifest": "2.8.3",
+    "@parcel/packager-raw-url": "2.8.1",
+    "@parcel/transformer-sass": "2.8.1",
+    "@parcel/transformer-webmanifest": "2.8.1",
     "@types/qrcode": "1.5.0",
     "@typescript-eslint/eslint-plugin": "5.40.0",
     "@typescript-eslint/parser": "5.40.0",
