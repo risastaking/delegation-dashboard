@@ -37,7 +37,7 @@ const Unlock = () => {
       name: 'xPortal Mobile Wallet',
       background: '#000000',
       icon: XPortal,
-      component: DappUI.WalletConnectLoginButton
+      component: <DappUI.WalletConnectLoginButton isWalletConnectV2 />
     },
     {
       title: 'Desktop',
