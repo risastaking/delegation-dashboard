@@ -37,7 +37,7 @@ const Unlock = () => {
       name: 'xPortal Mobile Wallet',
       background: '#000000',
       icon: XPortal,
-      component: <DappUI.WalletConnectLoginButton isWalletConnectV2 />
+      component: DappUI.WalletConnectLoginButton
     },
     {
       title: 'Desktop',
@@ -132,6 +132,7 @@ const Unlock = () => {
                 key={connect.name}
                 callbackRoute='/dashboard'
                 logoutRoute='/unlock'
+                isWalletConnectV2
               >
                 <span className={styles.connect}>
                   <span className={styles.title}>{connect.title}</span>
