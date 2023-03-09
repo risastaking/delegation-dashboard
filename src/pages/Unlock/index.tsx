@@ -132,6 +132,7 @@ const Unlock = () => {
                 key={connect.name}
                 callbackRoute='/dashboard'
                 logoutRoute='/unlock'
+                isWalletConnectV2
               >
                 <span className={styles.connect}>
                   <span className={styles.title}>{connect.title}</span>

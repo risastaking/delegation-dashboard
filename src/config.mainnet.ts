@@ -15,6 +15,7 @@ interface NetworkType {
   apiAddress: string;
   risaStakingContract: string;
   risaTokenId: string;
+  walletConnectV2ProjectId: string
 }
 
 export const minDust = '5000000000000000'; // 0.005 EGLD
@@ -60,7 +61,8 @@ export const network: NetworkType = {
     'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqthllllsy5r6rh',
   risaStakingContract:
     'erd1qqqqqqqqqqqqqpgqw8hw40pentyzcdse5jsy8vkrw25lp2tgj9qsjvzaw6',
-  risaTokenId: 'RISA-c115c7'
+  risaTokenId: 'RISA-c115c7',
+  walletConnectV2ProjectId: '2c4ec1fe10537b1030f5858f92deda67'
 };
 
 export const delegationContractData: Array<DelegationContractType> = [
