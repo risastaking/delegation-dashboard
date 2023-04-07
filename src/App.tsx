@@ -3,11 +3,7 @@ import { DappProvider } from '@multiversx/sdk-dapp/wrappers';
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from './components/Layout';
-import {
-  network,
-  walletConnectBridgeAddresses,
-  walletConnectDeepLink
-} from './config';
+import { network, walletConnectDeepLink } from './config';
 import { ContextProvider } from './context';
 import PageNotFound from './pages/PageNotFound';
 import Unlock from './pages/Unlock';
@@ -20,7 +16,6 @@ const App = () => (
       environment={network.id}
       customNetworkConfig={{
         ...network,
-        walletConnectBridgeAddresses,
         walletConnectDeepLink
       }}
     >
