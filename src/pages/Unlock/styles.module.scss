@@ -3,10 +3,6 @@
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 992px) {
-    height: 100vh;
-  }
-
   .wrapper {
     background: rgba(0, 6, 13, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -19,10 +15,18 @@
     padding: 30px;
     text-align: center;
 
-    @media (min-width: 992px) {
-      padding: 0 60px 60px;
+    .connectWrapper {
+      margin: -100px 0 30px 80%;
+      button {
+        color: #ffffffd9;
+        background: linear-gradient(rgb(32, 68, 245) 0%, rgb(27, 55, 192) 100%);
+        border-color: rgb(23, 23, 23);
+        border-radius: 15px;
+        font-weight: 600;
+        height: 3.5rem;
+        width: 10rem;
+      }
     }
-
     .logo {
       background: #303234;
       border: 1px solid #49494d;

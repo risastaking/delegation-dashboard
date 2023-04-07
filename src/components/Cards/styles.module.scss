@@ -2,6 +2,7 @@
   grid-column-gap: 20px;
   display: flex;
   flex-wrap: wrap;
+  max-width: 1055px;
 
   @media (min-width: 1200px) {
     flex-wrap: nowrap;

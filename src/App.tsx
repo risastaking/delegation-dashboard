@@ -1,8 +1,9 @@
 import * as DappUI from '@multiversx/sdk-dapp/UI';
 import { DappProvider } from '@multiversx/sdk-dapp/wrappers';
+import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Layout from './components/Layout';
-import { network, walletConnectBridge, walletConnectDeepLink } from './config';
+import { network } from './config';
 import { ContextProvider } from './context';
 import PageNotFound from './pages/PageNotFound';
 import Unlock from './pages/Unlock';
@@ -14,9 +15,7 @@ const App = () => (
     <DappProvider
       environment={network.id}
       customNetworkConfig={{
-        ...network,
-        walletConnectBridge,
-        walletConnectDeepLink
+        ...network
       }}
     >
       <ContextProvider>
@@ -34,7 +33,7 @@ const App = () => (
                 element={<route.component />}
               />
             ))}
-            <Route element={PageNotFound} />
+            <Route element={<PageNotFound></PageNotFound>} />
           </Routes>
         </Layout>
       </ContextProvider>
