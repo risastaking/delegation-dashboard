@@ -12,7 +12,7 @@
     "start-testnet": "yarn copy-testnet-config && yarn start",
     "build": "parcel build public/index.html",
     "build-testnet": "yarn copy-testnet-config && yarn build",
-    "build-mainnet": "yarn copy-mainnet-config && yarn build",
+    "build-mainnet": "npm config delete prefix && yarn copy-mainnet-config && yarn build",
     "test": "node scripts/test.js",
     "copy-wasm": "mkdir dist && cp ./public/bls_c.wasm ./dist && cp ./public/.htaccess ./dist && cp ./public/_redirects ./dist",
     "copy-testnet-config": "yarn copy-wasm && cp ./src/config.testnet.ts ./src/config.ts",
