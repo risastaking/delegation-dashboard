@@ -15,7 +15,7 @@ interface NetworkType {
   apiAddress: string;
   risaStakingContract: string;
   risaTokenId: string;
-  walletConnectV2ProjectId: string
+  walletConnectV2ProjectId: string;
 }
 
 export const minDust = '5000000000000000'; // 0.005 EGLD
@@ -45,7 +45,7 @@ export const stakingContract =
   'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqllls0lczs7';
 export const delegationManagerContract =
   'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqylllslmq6y6';
-export const walletConnectBridge = 'https://bridge.walletconnect.org';
+export const walletConnectBridgeAddresses = 'wss://relay.walletconnect.com';
 export const walletConnectDeepLink =
   'https://maiar.page.link/?apn=com.elrond.maiar.wallet&isi=1519405832&ibi=com.elrond.maiar.wallet&link=https://maiar.com/';
 
