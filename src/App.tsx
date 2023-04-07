@@ -9,9 +9,6 @@ import PageNotFound from './pages/PageNotFound';
 import Unlock from './pages/Unlock';
 import { routeNames } from './routes';
 import routes from './routes';
-import { isReactNative } from '@walletconnect/environment';
-
-console.log(isReactNative())
 
 const App = () => (
   <Router>
