@@ -3,14 +3,16 @@ import React, { FC, useEffect } from 'react';
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import * as DappUI from '@multiversx/sdk-dapp/UI';
 import { useNavigate } from 'react-router-dom';
+import * as bootstrap from 'bootstrap';
 
-import Extension from '../../assets/Extension';
 import Ledger from '../../assets/Ledger';
 import XPortal from '../../assets/XPortal';
 import Logo from '../../assets/Logo';
 import XLogo from '../../assets/XLogo';
 
 import * as styles from './styles.module.scss';
+import Cards from '../../components/Cards';
+import useGlobalData from '../../hooks/useGlobalData';
 
 interface ConnectionType {
   title: string;
@@ -22,6 +24,7 @@ interface ConnectionType {
 
 const Unlock = () => {
   const { address } = useGetAccountInfo();
+  useGlobalData();
 
   const navigate = useNavigate();
   const connects: Array<ConnectionType> = [
@@ -57,6 +60,8 @@ const Unlock = () => {
 
   const redirectConditionally = () => {
     if (Boolean(address)) {
+      const loginModalEl = document.querySelector('#loginModal');
+      bootstrap.Modal.getInstance(loginModalEl).hide();
       navigate('/dashboard');
     }
   };
@@ -103,6 +108,17 @@ const Unlock = () => {
       </small>
       <div className={styles.unlock}>
         <div className={styles.wrapper}>
+          <div className={styles.connectWrapper}>
+            <button
+              type='button'
+              className='btn btn-primary'
+              data-bs-toggle='modal'
+              data-bs-target='#loginModal'
+            >
+              Connect
+            </button>
+          </div>
+
           <div className={styles.logo}>
             <Logo />
           </div>
@@ -111,10 +127,8 @@ const Unlock = () => {
 
           <div className={styles.description}>
             Stake $EGLD and $RISA 🔥
-            <br />
-            <br />
-            <br />
-            <br />
+            <br></br>
+            <br></br>
             <ul style={{ textAlign: 'left' }}>
               <li style={{ paddingBottom: '1rem' }}>8-12% APR on your $EGLD</li>
               <li style={{ paddingBottom: '1rem' }}>
@@ -124,30 +138,49 @@ const Unlock = () => {
                 Airdropped $RISA (exclusive to our pool)
               </li>
             </ul>
-            Login below to start staking:
           </div>
-          <div className={styles.connects}>
-            {connects.map((connect: ConnectionType) => (
-              <connect.component
-                key={connect.name}
-                callbackRoute='/dashboard'
-                logoutRoute='/unlock'
-                isWalletConnectV2
-              >
-                <span className={styles.connect}>
-                  <span className={styles.title}>{connect.title}</span>
 
-                  <span
-                    className={styles.icon}
-                    style={{ background: connect.background }}
-                  >
-                    <connect.icon />
-                  </span>
+          <Cards />
 
-                  <span className={styles.name}>{connect.name}</span>
-                </span>
-              </connect.component>
-            ))}
+          <div className='modal' id='loginModal' tabIndex={-1}>
+            <div className='modal-dialog'>
+              <div className='modal-content'>
+                <div className='modal-header'>
+                  <h5 className='modal-title'>Select Wallet</h5>
+                  <button
+                    type='button'
+                    className='btn-close'
+                    data-bs-dismiss='modal'
+                    aria-label='Close'
+                  ></button>
+                </div>
+                <div className='modal-body'>
+                  <div className={styles.connects}>
+                    {connects.map((connect: ConnectionType) => (
+                      <connect.component
+                        key={connect.name}
+                        callbackRoute='/dashboard'
+                        logoutRoute='/unlock'
+                        isWalletConnectV2
+                      >
+                        <span className={styles.connect}>
+                          <span className={styles.title}>{connect.title}</span>
+
+                          <span
+                            className={styles.icon}
+                            style={{ background: connect.background }}
+                          >
+                            <connect.icon />
+                          </span>
+
+                          <span className={styles.name}>{connect.name}</span>
+                        </span>
+                      </connect.component>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

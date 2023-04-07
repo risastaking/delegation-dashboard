@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -16,8 +16,8 @@ import useGlobalData from '../../hooks/useGlobalData';
 import * as styles from './styles.module.scss';
 
 const Dashboard = () => {
-  const { address } = useGetAccountInfo();
   const [loading, setLoading] = useState<boolean>(true);
+  const { address } = useGetAccountInfo();
 
   const navigate = useNavigate();
   const handleRedirect = () =>
