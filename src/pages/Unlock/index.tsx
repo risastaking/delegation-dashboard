@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import * as DappUI from '@multiversx/sdk-dapp/UI';
@@ -28,6 +28,7 @@ const Unlock = () => {
   useGlobalData();
 
   const navigate = useNavigate();
+  const loginModal = useRef(null);
   const connects: Array<ConnectionType | null> = [
     isChromeDesktop
       ? {
@@ -62,10 +63,12 @@ const Unlock = () => {
   ];
 
   const redirectConditionally = () => {
-    if (Boolean(address)) {
-      const loginModalEl = document.querySelector('#loginModal');
-      bootstrap.Modal.getInstance(loginModalEl)?.hide();
-      navigate('/dashboard');
+    if (Boolean(address) && loginModal.current) {
+      const modal = bootstrap.Modal.getInstance(loginModal.current)
+      modal?.on('hidden.bs.modal', () => {
+          navigate('/dashboard');
+        })
+      modal?.hide();
     }
   };
 
@@ -145,7 +148,7 @@ const Unlock = () => {
 
           <Cards />
 
-          <div className='modal' id='loginModal' tabIndex={-1}>
+          <div className='modal' id='loginModal' tabIndex={-1} ref={loginModal}>
             <div className='modal-dialog'>
               <div className='modal-content'>
                 <div className='modal-header'>

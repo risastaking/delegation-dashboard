@@ -179,7 +179,7 @@ const useGlobalData = () => {
             queryResponse
           );
 
-          return decodeBigNumber(values[0]).toFixed();
+          return values?.[0] ? decodeBigNumber(values[0]).toFixed() : '0';
         } catch (error) {
           return Promise.reject(error);
         }
