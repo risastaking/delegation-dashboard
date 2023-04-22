@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import * as DappUI from '@multiversx/sdk-dapp/UI';
@@ -13,6 +13,7 @@ import XLogo from '../../assets/XLogo';
 import * as styles from './styles.module.scss';
 import Cards from '../../components/Cards';
 import useGlobalData from '../../hooks/useGlobalData';
+import { isChromeDesktop } from '../../helpers/isChromeDesktop';
 
 interface ConnectionType {
   title: string;
@@ -27,14 +28,17 @@ const Unlock = () => {
   useGlobalData();
 
   const navigate = useNavigate();
-  const connects: Array<ConnectionType> = [
-    {
-      title: 'Browser',
-      name: 'MultiversX DeFi Wallet',
-      background: '#000000',
-      icon: XLogo,
-      component: DappUI.ExtensionLoginButton
-    },
+  const loginModal = useRef(null);
+  const connects: Array<ConnectionType | null> = [
+    isChromeDesktop
+      ? {
+          title: 'Browser',
+          name: 'MultiversX DeFi Wallet',
+          background: '#000000',
+          icon: XLogo,
+          component: DappUI.ExtensionLoginButton
+        }
+      : null,
     {
       title: 'Mobile',
       name: 'xPortal Mobile Wallet',
@@ -59,10 +63,12 @@ const Unlock = () => {
   ];
 
   const redirectConditionally = () => {
-    if (Boolean(address)) {
-      const loginModalEl = document.querySelector('#loginModal');
-      bootstrap.Modal.getInstance(loginModalEl).hide();
-      navigate('/dashboard');
+    if (Boolean(address) && loginModal.current) {
+      const modal = bootstrap.Modal.getInstance(loginModal.current)
+      modal?.on('hidden.bs.modal', () => {
+          navigate('/dashboard');
+        })
+      modal?.hide();
     }
   };
 
@@ -142,7 +148,7 @@ const Unlock = () => {
 
           <Cards />
 
-          <div className='modal' id='loginModal' tabIndex={-1}>
+          <div className='modal' id='loginModal' tabIndex={-1} ref={loginModal}>
             <div className='modal-dialog'>
               <div className='modal-content'>
                 <div className='modal-header'>
@@ -156,7 +162,7 @@ const Unlock = () => {
                 </div>
                 <div className='modal-body'>
                   <div className={styles.connects}>
-                    {connects.map((connect: ConnectionType) => (
+                    {connects.map((connect: ConnectionType | null) => connect && (
                       <connect.component
                         key={connect.name}
                         callbackRoute='/dashboard'

@@ -31,7 +31,7 @@ const Delegate = () => {
       const res = await fetch(
         `${network.apiAddress}/accounts/${account.address}/tokens?identifier=${network.risaTokenId}`
       ).then((res) => res.json());
-      setBalance(res?.[0].balance);
+      setBalance(res?.[0]?.balance);
     }
     fetchData();
   };

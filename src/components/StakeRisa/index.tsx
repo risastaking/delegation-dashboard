@@ -131,7 +131,7 @@ const Stake = () => {
               ? 'Loading...'
               : isError
               ? 'There was an error trying to retrieve staking data.'
-              : `Currently you don't have any RISA staked.`}
+              : `0 RISA staked.`}
           </div>
 
           <Delegate />

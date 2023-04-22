@@ -108,7 +108,7 @@ const Stake = () => {
               ? 'Loading...'
               : isError
               ? 'There was an error trying to retrieve staking data.'
-              : `Currently you don't have any ${network.egldLabel} staked.`}
+              : `0 ${network.egldLabel} staked.`}
           </div>
 
           <Delegate />
