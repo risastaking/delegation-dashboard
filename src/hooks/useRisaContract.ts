@@ -10,7 +10,6 @@ import {
   Address,
   SmartContract,
   AbiRegistry,
-  SmartContractAbi,
   ResultsParser,
   Interaction,
   AddressValue
@@ -51,10 +50,9 @@ export interface StakeAccountType {
 const useRisaContract = () => {
   const networkProvider = new ProxyNetworkProvider(network.gatewayAddress);
   const abiRegistry = AbiRegistry.create(abiFile);
-  const abi = new SmartContractAbi(abiRegistry, ['OdinRisaStake']);
   const contract = new SmartContract({
     address: new Address(network.risaStakingContract),
-    abi: abi
+    abi: abiRegistry
   });
   let resultsParser = new ResultsParser();
   const { account, address: userAddress } = useGetAccountInfo();

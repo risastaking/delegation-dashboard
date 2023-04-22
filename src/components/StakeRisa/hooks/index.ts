@@ -13,7 +13,6 @@ import {
   ContractFunction,
   ResultsParser,
   AbiRegistry,
-  SmartContractAbi,
   SmartContract,
   TokenPayment
 } from '@multiversx/sdk-core';
@@ -55,10 +54,9 @@ const useStakeData = () => {
 
   const chainID = getChainID();
   const abiRegistry = AbiRegistry.create(abiFile);
-  const abi = new SmartContractAbi(abiRegistry, ['OdinRisaStake']);
   const contract = new SmartContract({
     address: new Address(network.risaStakingContract),
-    abi: abi
+    abi: abiRegistry
   });
 
   const onStake = async (payload: StakePayloadType): Promise<void> => {
@@ -125,10 +123,9 @@ const useStakeData = () => {
 
     try {
       let abiRegistry = AbiRegistry.create(abiFile);
-      let abi = new SmartContractAbi(abiRegistry, ['OdinRisaStake']);
       let contract = new SmartContract({
         address: new Address(network.risaStakingContract),
-        abi: abi
+        abi: abiRegistry
       });
       const provider = new ProxyNetworkProvider(network.gatewayAddress);
       const query = new Query({
@@ -181,10 +178,9 @@ const useStakeData = () => {
 
     try {
       let abiRegistry = AbiRegistry.create(abiFile);
-      let abi = new SmartContractAbi(abiRegistry, ['OdinRisaStake']);
       let contract = new SmartContract({
         address: new Address(network.risaStakingContract),
-        abi: abi
+        abi: abiRegistry
       });
       const provider = new ProxyNetworkProvider(network.gatewayAddress);
       const query = new Query({
