@@ -50,12 +50,8 @@ const useTransaction = () => {
           : delegable.gasLimit;
       };
 
-      const data = TransactionPayload.contractCall()
-        .setFunction(new ContractFunction(getFunctionName()))
-        .build();
-
       const transaction = new Transaction({
-        data,
+        data: new TransactionPayload(getFunctionName()),
         chainID: chainID.valueOf(),
         receiver: contract.getAddress(),
         value: value,
