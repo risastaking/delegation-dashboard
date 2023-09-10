@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 
 import { Formik } from 'formik';
-import { Submit } from '/src/components/Action';
+import { Submit } from '../../../../components/Action';
 
-import { useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
-import { nominateVal } from '/src/helpers/nominate';
-import useTransaction from '/src/helpers/useTransaction';
+import { useGlobalContext } from '../../../../context';
+import modifiable from '../../../../helpers/modifiable';
+import { nominateVal } from '../../../../helpers/nominate';
+import useTransaction from '../../../../helpers/useTransaction';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface ActionDataType {
   amount: string;

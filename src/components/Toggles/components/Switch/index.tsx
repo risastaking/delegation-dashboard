@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
-import useTransaction from '/src/helpers/useTransaction';
+import { useGlobalContext } from '../../../../context';
+import modifiable from '../../../../helpers/modifiable';
+import useTransaction from '../../../../helpers/useTransaction';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface ToggleType {
   transaction: string;

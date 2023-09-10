@@ -18,13 +18,13 @@ import {
   ResultsParser
 } from '@multiversx/sdk-core';
 import moment from 'moment';
-import { network, decimals, denomination } from '/src/config';
-import { useGlobalContext, useDispatch } from '/src/context';
-import { UndelegateStakeListType } from '/src/context/state';
+import { network, decimals, denomination } from '../../config';
+import { useGlobalContext, useDispatch } from '../../context';
+import { UndelegateStakeListType } from '../../context/state';
 
 import Withdrawal from './components/Withdrawal';
-import * as styles from './styles.module.scss';
-import { denominate } from '/src/helpers/denominate';
+import styles from './styles.module.scss';
+import { denominate } from '../../helpers/denominate';
 
 const Withdrawals = () => {
   const dispatch = useDispatch();

@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useFormikContext, FormikProps } from 'formik';
 import moment from 'moment';
 import { useDropzone } from 'react-dropzone';
-import { network } from '/src/config';
-import modifiable from '/src/helpers/modifiable';
+import { network } from '../../../../config';
+import modifiable from '../../../../helpers/modifiable';
 import decodeFile from './helpers';
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 export interface DropzoneFormType {
   files: Array<any>;

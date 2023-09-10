@@ -4,13 +4,13 @@ import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import { faWallet, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import Logo from '/src/assets/Logo';
-import { network } from '/src/config';
-import EGLD from '/src/assets/EGLD';
+import Logo from '../../../assets/Logo';
+import { network } from '../../../config';
+import EGLD from '../../../assets/EGLD';
 
-import modifiable from '/src/helpers/modifiable';
-import * as styles from './styles.module.scss';
-import { denominate } from '/src/helpers/denominate';
+import modifiable from '../../../helpers/modifiable';
+import styles from './styles.module.scss';
+import { denominate } from '../../../helpers/denominate';
 
 interface ButtonsType {
   icon: ReactNode;

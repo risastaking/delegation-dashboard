@@ -4,16 +4,15 @@ import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import { Formik } from 'formik';
 import { object, string } from 'yup';
 import { nominate } from '@multiversx/sdk-dapp/utils/operations';
-import { denominate } from '/src/helpers/denominate';
+import { denominate } from '../../../../helpers/denominate';
 
-import Action, { Submit } from '/src/components/Action';
-import { delegateValidator } from '/src/components/StakeRisa//helpers/delegationValidators';
-import useStakeData from '/src/components/StakeRisa/hooks';
-import { network } from '/src/config';
+import Action, { Submit } from '../../../../components/Action';
+import useStakeData from '../../../../components/StakeRisa/hooks';
+import { network } from '../../../../config';
 
-import modifiable from '/src/helpers/modifiable';
+import modifiable from '../../../../helpers/modifiable';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 const Delegate = () => {
   const { account } = useGetAccountInfo();

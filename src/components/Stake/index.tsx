@@ -1,19 +1,19 @@
 import React, { FC, ReactNode, MouseEvent } from 'react';
 import { faLock, faGift } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { denominate } from '/src/helpers/denominate';
+import { denominate } from '../../helpers/denominate';
 
-import XLogo from '/src/assets/XLogo';
-import { network } from '/src/config';
-import { useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
+import XLogo from '../../assets/XLogo';
+import { network } from '../../config';
+import { useGlobalContext } from '../../context';
+import modifiable from '../../helpers/modifiable';
 
 import Delegate from './components/Delegate';
 import Undelegate from './components/Undelegate';
 
 import useStakeData from './hooks';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface ActionType {
   label: string;

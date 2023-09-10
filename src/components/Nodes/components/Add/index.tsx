@@ -3,15 +3,15 @@ import React, { FC } from 'react';
 import { Formik } from 'formik';
 import { object, array, mixed } from 'yup';
 
-import { Submit } from '/src/components/Action';
+import { Submit } from '../../../../components/Action';
 
 import Dropzone, {
   DropzonePayloadType,
   DropzoneFormType
-} from '/src/components/Nodes/components/Dropzone';
-import useTransaction from '/src/helpers/useTransaction';
+} from '../../../../components/Nodes/components/Dropzone';
+import useTransaction from '../../../../helpers/useTransaction';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 const Add = () => {
   const { sendTransaction } = useTransaction();

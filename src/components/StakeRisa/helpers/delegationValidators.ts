@@ -7,8 +7,8 @@ import {
 
 import BigNumber from 'bignumber.js';
 import { string } from 'yup';
-import { network, denomination } from '/src/config';
-import { denominate } from '/src/helpers/denominate';
+import { network, denomination } from '../../../config';
+import { denominate } from '../../../helpers/denominate';
 
 const undelegateValidator = (input: string) =>
   string()

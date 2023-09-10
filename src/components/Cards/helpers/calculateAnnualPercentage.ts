@@ -7,8 +7,8 @@ import {
   protocolSustainabilityRewards,
   yearSettings,
   genesisTokenSupply
-} from '/src/config';
-import { denominate } from '/src/helpers/denominate';
+} from '../../../config';
+import { denominate } from '../../../helpers/denominate';
 
 const denominateValue = (value: string) => {
   const denominatedValueString = denominate({

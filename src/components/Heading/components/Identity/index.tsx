@@ -7,21 +7,20 @@ import {
   ContractFunction,
   Address,
   Query,
-  decodeString,
   ResultsParser
 } from '@multiversx/sdk-core';
 
 import { Formik, FormikProps } from 'formik';
 import { object, string } from 'yup';
 
-import { Submit } from '/src/components/Action';
-import { network } from '/src/config';
+import { Submit } from '../../../../components/Action';
+import { network } from '../../../../config';
 
-import { useDispatch, useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
-import useTransaction from '/src/helpers/useTransaction';
+import { useDispatch, useGlobalContext } from '../../../../context';
+import modifiable from '../../../../helpers/modifiable';
+import useTransaction from '../../../../helpers/useTransaction';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 import { useGetActiveTransactionsStatus } from '@multiversx/sdk-dapp/hooks';
 
 interface FieldType {

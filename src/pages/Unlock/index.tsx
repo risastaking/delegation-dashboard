@@ -10,7 +10,7 @@ import XPortal from '../../assets/XPortal';
 import Logo from '../../assets/Logo';
 import XLogo from '../../assets/XLogo';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 import Cards from '../../components/Cards';
 import useGlobalData from '../../hooks/useGlobalData';
 import { isChromeDesktop } from '../../helpers/isChromeDesktop';

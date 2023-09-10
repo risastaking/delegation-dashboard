@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 
 import moment from 'moment';
-import XLogo from '/src/assets/XLogo';
-import { network } from '/src/config';
-import { UndelegateStakeListType } from '/src/context/state';
-import modifiable from '/src/helpers/modifiable';
-import useTransaction from '/src/helpers/useTransaction';
+import XLogo from '../../../../assets/XLogo';
+import { network } from '../../../../config';
+import { UndelegateStakeListType } from '../../../../context/state';
+import modifiable from '../../../../helpers/modifiable';
+import useTransaction from '../../../../helpers/useTransaction';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface FormattersType {
   [key: string]: any;

@@ -5,15 +5,15 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 
-import Cards from '/src/components/Cards';
-import Heading from '/src/components/Heading';
-import Stake from '/src/components/Stake';
-import StakeRisa from '/src/components/StakeRisa';
-import Withdrawals from '/src/components/Withdrawals';
+import Cards from '../../components/Cards';
+import Heading from '../../components/Heading';
+import Stake from '../../components/Stake';
+import StakeRisa from '../../components/StakeRisa';
+import Withdrawals from '../../components/Withdrawals';
 
 import useGlobalData from '../../hooks/useGlobalData';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 const Dashboard = () => {
   const [loading, setLoading] = useState<boolean>(true);

@@ -18,8 +18,8 @@ import {
   ResultsParser
 } from '@multiversx/sdk-core';
 
-import { network, auctionContract } from '/src/config';
-import { useDispatch } from '/src/context';
+import { network, auctionContract } from '../config';
+import { useDispatch } from '../context';
 
 interface ContractDetailsType {
   automaticActivation: string;

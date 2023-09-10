@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, ReactNode } from 'react';
 
-import { denominate } from '/src/helpers/denominate';
+import { denominate } from '../../helpers/denominate';
 
 import {
   ProxyNetworkProvider,
@@ -27,19 +27,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
-import Logo from '/src/assets/Logo';
+import Logo from '../../assets/Logo';
 
-import Action from '/src/components/Action';
-import { network, auctionContract } from '/src/config';
-import { useGlobalContext, useDispatch } from '/src/context';
-import getPercentage from '/src/helpers/getPercentage';
-import modifiable from '/src/helpers/modifiable';
+import Action from '../../components/Action';
+import { network, auctionContract } from '../../config';
+import { useGlobalContext, useDispatch } from '../../context';
+import getPercentage from '../../helpers/getPercentage';
+import modifiable from '../../helpers/modifiable';
 import ChangeDelegationCap from './components/ChangeDelegationCap';
 import ChangeServiceFee from './components/ChangeServiceFee';
 
 import calculateAnnualPercentage from './helpers/calculateAnnualPercentage';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 interface CardType {
   label: string;

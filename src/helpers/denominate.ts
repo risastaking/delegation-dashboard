@@ -1,7 +1,7 @@
 import {
     decimals as defaultDecimals,
     denomination as defaultDenomination
-} from '/src/config';
+} from '../config';
 
 function format(
     big: string,

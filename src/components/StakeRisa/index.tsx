@@ -3,10 +3,10 @@ import dayjs from 'dayjs';
 import { faLock, faGift } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Logo from '/src/assets/Logo';
-import { network } from '/src/config';
-import { useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
+import Logo from '../../assets/Logo';
+import { network } from '../../config';
+import { useGlobalContext } from '../../context';
+import modifiable from '../../helpers/modifiable';
 
 import Delegate from './components/Delegate';
 import Undelegate from './components/Undelegate';
@@ -14,7 +14,7 @@ import Tier from './components/Tier';
 
 import useStakeData from './hooks';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 import StakeDetails from './components/StakeDetails';
 import ClaimDetails from './components/ClaimDetails';
 

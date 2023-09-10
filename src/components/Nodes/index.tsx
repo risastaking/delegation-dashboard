@@ -28,14 +28,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Dropdown } from 'react-bootstrap';
 
 import Action from '../Action';
-import { network, auctionContract, stakingContract } from '/src/config';
-import { useGlobalContext } from '/src/context';
-import modifiable from '/src/helpers/modifiable';
+import { network, auctionContract, stakingContract } from '../../config';
+import { useGlobalContext } from '../../context';
+import modifiable from '../../helpers/modifiable';
 
-import useTransaction from '/src/helpers/useTransaction';
+import useTransaction from '../../helpers/useTransaction';
 
 import Add from './components/Add';
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 import variants from './variants.json';
 import { useGetActiveTransactionsStatus } from '@multiversx/sdk-dapp/hooks';
 

@@ -2,8 +2,8 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 
-import useStakeData from '/src/components/StakeRisa/hooks';
-import * as styles from './styles.module.scss';
+import useStakeData from '../../../../components/StakeRisa/hooks';
+import styles from './styles.module.scss';
 
 const ClaimDetails = () => {
   const { stakeAccount, stakeSettings } = useStakeData();
@@ -24,10 +24,7 @@ const ClaimDetails = () => {
       <div>
         <br />
       </div>
-      <div>
-        {claimIsAfterNow &&
-          `Next claim ${claimAt.fromNow()}`}
-      </div>
+      <div>{claimIsAfterNow && `Next claim ${claimAt.fromNow()}`}</div>
     </div>
   );
 };

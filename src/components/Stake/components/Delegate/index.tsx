@@ -3,16 +3,16 @@ import React, { FC, MouseEvent } from 'react';
 import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
 import { Formik } from 'formik';
 import { object } from 'yup';
-import { denominate } from '/src/helpers/denominate';
+import { denominate } from '../../../../helpers/denominate';
 
-import Action, { Submit } from '/src/components/Action';
-import { delegateValidator } from '/src/components/Stake//helpers/delegationValidators';
-import useStakeData from '/src/components/Stake/hooks';
-import { network } from '/src/config';
+import Action, { Submit } from '../../../../components/Action';
+import { delegateValidator } from '../../../../components/Stake//helpers/delegationValidators';
+import useStakeData from '../../../../components/Stake/hooks';
+import { network } from '../../../../config';
 
-import modifiable from '/src/helpers/modifiable';
+import modifiable from '../../../../helpers/modifiable';
 
-import * as styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 const Delegate = () => {
   const { account } = useGetAccountInfo();

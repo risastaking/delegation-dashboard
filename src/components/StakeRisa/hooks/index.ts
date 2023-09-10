@@ -16,16 +16,16 @@ import {
   SmartContract,
   TokenPayment
 } from '@multiversx/sdk-core';
-import { network } from '/src/config';
-import { useDispatch, useGlobalContext } from '/src/context';
+import { network } from '../../../config';
+import { useDispatch, useGlobalContext } from '../../../context';
 
 import abiFile from '../../../assets/abi/risa-staking-contract.json';
 import { formatAmount } from '@multiversx/sdk-dapp/utils/operations/formatAmount';
-import useRisaContract from '/src/hooks/useRisaContract';
+import useRisaContract from '../../../hooks/useRisaContract';
 import {
   StakeSettingsType,
   StakeAccountType
-} from '/src/hooks/useRisaContract';
+} from '../../../hooks/useRisaContract';
 
 interface StakePayloadType {
   amount: string;

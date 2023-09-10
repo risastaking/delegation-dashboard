@@ -2,16 +2,16 @@ import React, { FC, ChangeEvent, MouseEvent, useState } from 'react';
 
 import { Formik } from 'formik';
 import { object } from 'yup';
-import Action, { Submit } from '/src/components/Action';
-import { undelegateValidator } from '/src/components/StakeRisa//helpers/delegationValidators';
-import useStakeData from '/src/components/StakeRisa/hooks';
-import { network } from '/src/config';
-import { useGlobalContext } from '/src/context';
+import Action, { Submit } from '../../../../components/Action';
+import { undelegateValidator } from '../../../../components/StakeRisa//helpers/delegationValidators';
+import useStakeData from '../../../../components/StakeRisa/hooks';
+import { network } from '../../../../config';
+import { useGlobalContext } from '../../../../context';
 
-import { denominate } from '/src/helpers/denominate';
+import { denominate } from '../../../../helpers/denominate';
 
-import modifiable from '/src/helpers/modifiable';
-import * as styles from './styles.module.scss';
+import modifiable from '../../../../helpers/modifiable';
+import styles from './styles.module.scss';
 
 const Undelegate = (props: { disabled: boolean }) => {
   const { userActiveRisaStake } = useGlobalContext();

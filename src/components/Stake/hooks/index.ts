@@ -18,12 +18,12 @@ import {
 } from '@multiversx/sdk-core';
 import BigNumber from 'bignumber.js';
 
-import { network, minDust } from '/src/config';
-import { useDispatch, useGlobalContext } from '/src/context';
-import { denominate } from '/src/helpers/denominate';
-import getPercentage from '/src/helpers/getPercentage';
-import { nominateValToHex } from '/src/helpers/nominate';
-import useTransaction from '/src/helpers/useTransaction';
+import { network, minDust } from '../../../config';
+import { useDispatch, useGlobalContext } from '../../../context';
+import { denominate } from '../../../helpers/denominate';
+import getPercentage from '../../../helpers/getPercentage';
+import { nominateValToHex } from '../../../helpers/nominate';
+import useTransaction from '../../../helpers/useTransaction';
 import { parseAmount } from '@multiversx/sdk-dapp/utils/operations/parseAmount';
 
 interface DelegationPayloadType {

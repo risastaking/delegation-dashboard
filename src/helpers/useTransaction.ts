@@ -13,7 +13,7 @@ import {
   network,
   DelegationContractType,
   delegationContractData
-} from '/src/config';
+} from '../config';
 
 interface TransactionParametersType {
   args: string;

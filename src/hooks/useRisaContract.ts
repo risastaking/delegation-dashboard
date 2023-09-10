@@ -15,7 +15,7 @@ import {
   AddressValue
 } from '@multiversx/sdk-core';
 import BigNumber from 'bignumber.js';
-import { network } from '/src/config';
+import { network } from '../config';
 
 import abiFile from '../assets/abi/risa-staking-contract.json';
 
