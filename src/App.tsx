@@ -17,7 +17,8 @@ const App = () => (
 
   <AxiosInterceptorContext.Provider>
   <AxiosInterceptorContext.Interceptor
-    authenticatedDomanis={['https://risastaking.com', 'http://localhost:1234']}
+    // todo: fix Domanis typo when new sdk-dapp is released
+    authenticatedDomanis={['https://api.multiversx.com']}
   >
   <Router>
     <DappProvider

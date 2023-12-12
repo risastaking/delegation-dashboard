@@ -1,9 +1,7 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
 
-import { useGetAccountInfo } from '@multiversx/sdk-dapp/hooks';
-import * as DappUI from '@multiversx/sdk-dapp/UI';
-import { useNavigate } from 'react-router-dom';
-import * as bootstrap from 'bootstrap';
+
+import { WebWalletLoginButton } from '@multiversx/sdk-dapp/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
+import {WalletConnectLoginButton, ExtensionLoginButton, LedgerLoginButton } from '@multiversx/sdk-dapp/UI'
 
 import Ledger from '../../assets/Ledger';
 import XPortal from '../../assets/XPortal';
@@ -27,7 +25,6 @@ interface ConnectionType {
 const Unlock = () => {
   useGlobalData();
 
-  const loginModal = useRef(null);
   const connects: Array<ConnectionType | null> = [
     isChromeDesktop
       ? {
@@ -35,7 +32,7 @@ const Unlock = () => {
           name: 'MultiversX DeFi Wallet',
           background: '#000000',
           icon: XLogo,
-          component: DappUI.ExtensionLoginButton
+          component: ExtensionLoginButton
         }
       : null,
     {
@@ -43,21 +40,21 @@ const Unlock = () => {
       name: 'xPortal Mobile Wallet',
       background: '#000000',
       icon: XPortal,
-      component: DappUI.WalletConnectLoginButton
+      component: WalletConnectLoginButton
     },
     {
       title: 'Desktop',
       name: 'MultiversX Web Wallet',
       background: '#000000',
       icon: XLogo,
-      component: DappUI.WebWalletLoginButton
+      component: WebWalletLoginButton
     },
     {
       title: 'Hardware',
       name: 'Ledger Hardware Wallet',
       background: '#000000',
       icon: Ledger,
-      component: DappUI.LedgerLoginButton
+      component: LedgerLoginButton
     }
   ];
 
@@ -137,7 +134,7 @@ const Unlock = () => {
 
           <Cards />
 
-          <div className='modal' id='loginModal' tabIndex={-1} ref={loginModal}>
+          <div className='modal' id='loginModal' tabIndex={-1}>
             <div className='modal-dialog'>
               <div className='modal-content'>
                 <div className='modal-header'>
