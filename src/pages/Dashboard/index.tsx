@@ -14,20 +14,17 @@ import Withdrawals from '/src/components/Withdrawals';
 import useGlobalData from '../../hooks/useGlobalData';
 
 import * as styles from './styles.module.scss';
+import { AuthRedirect } from 'components/AuthRedirect/index.js';
 
 const Dashboard = () => {
   const [loading, setLoading] = useState<boolean>(true);
-  const { address } = useGetAccountInfo();
 
-  const navigate = useNavigate();
-  const handleRedirect = () =>
-    Boolean(address) ? setLoading(false) : navigate('/unlock');
-
-  useEffect(handleRedirect, [address]);
   useGlobalData();
 
   if (loading) {
     return (
+
+      <AuthRedirect requireAuth={true}>
       <div
         style={{ fontSize: '30px' }}
         className='d-flex align-items-center justify-content-center text-white flex-fill'
@@ -40,6 +37,7 @@ const Dashboard = () => {
         />
         Loading...
       </div>
+      </AuthRedirect>
     );
   }
 

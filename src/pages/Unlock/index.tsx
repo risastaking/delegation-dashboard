@@ -14,6 +14,7 @@ import * as styles from './styles.module.scss';
 import Cards from '../../components/Cards';
 import useGlobalData from '../../hooks/useGlobalData';
 import { isChromeDesktop } from '../../helpers/isChromeDesktop';
+import { AuthRedirect } from 'components/AuthRedirect/index.js';
 
 interface ConnectionType {
   title: string;
@@ -24,10 +25,8 @@ interface ConnectionType {
 }
 
 const Unlock = () => {
-  const { address } = useGetAccountInfo();
   useGlobalData();
 
-  const navigate = useNavigate();
   const loginModal = useRef(null);
   const connects: Array<ConnectionType | null> = [
     isChromeDesktop
@@ -62,20 +61,10 @@ const Unlock = () => {
     }
   ];
 
-  const redirectConditionally = () => {
-    if (Boolean(address) && loginModal.current) {
-      const modal = bootstrap.Modal.getInstance(loginModal.current)
-      modal?.on('hidden.bs.modal', () => {
-          navigate('/dashboard');
-        })
-      modal?.hide();
-    }
-  };
-
-  useEffect(redirectConditionally, [address]);
 
   return (
-    <>
+    
+    <AuthRedirect requireAuth={false}>
       <small
         className='domain-warning d-block text-center py-2 px-3 '
         role='alert'
@@ -190,7 +179,7 @@ const Unlock = () => {
           </div>
         </div>
       </div>
-    </>
+    </AuthRedirect>
   );
 };
 
