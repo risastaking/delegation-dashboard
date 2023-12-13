@@ -8,9 +8,9 @@
   "type": "module",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel public/index.html",
+    "start": "vite dev",
     "start-testnet": "yarn copy-testnet-config && yarn start",
-    "build": "parcel build public/index.html --no-scope-hoist --no-source-maps",
+    "build": "vite build",
     "build-testnet": "yarn copy-testnet-config && yarn build",
     "build-mainnet": "yarn copy-mainnet-config && yarn build",
     "test": "node scripts/test.js",
@@ -25,9 +25,6 @@
       "react-app",
       "react-app/jest"
     ]
-  },
-  "@parcel/resolver-default": {
-    "packageExports": true
   },
   "jest": {
     "roots": [
@@ -92,8 +89,6 @@
     "@multiversx/sdk-dapp": "2.24.4",
     "@multiversx/sdk-network-providers": "2.2.0",
     "@multiversx/sdk-wallet": "4.2.0",
-    "@parcel/config-default": "^2.9.3",
-    "@parcel/core": "^2.9.3",
     "@popperjs/core": "^2.11.8",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "11.1.0",
@@ -104,12 +99,11 @@
     "@types/react-router-dom": "5.3.3",
     "axios": "1.3.5",
     "bignumber.js": "^9.1.1",
-    "bootstrap": "5.3.1",
+    "bootstrap": "5.3.2",
     "buffer": "^5.5.0",
     "dayjs": "1.11.7",
     "formik": "2.2.9",
     "moment": "2.29.4",
-    "parcel": "2.9.3",
     "react": "18.2.0",
     "react-bootstrap": "2.8.0",
     "react-dom": "18.2.0",
@@ -124,13 +118,12 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.9.3",
-    "@parcel/transformer-sass": "2.9.3",
-    "@parcel/transformer-webmanifest": "2.9.3",
     "@types/node": "^18.15.13",
     "@types/qrcode": "1.5.0",
     "@typescript-eslint/eslint-plugin": "5.40.0",
     "@typescript-eslint/parser": "5.40.0",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
+    "@vitejs/plugin-react": "4.1.0",
     "crypto-browserify": "3.12.0",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "8.8.0",
@@ -151,6 +144,10 @@
     "process": "0.11.10",
     "punycode": "^1.4.1",
     "stream-browserify": "^3.0.0",
-    "string_decoder": "^1.3.0"
+    "string_decoder": "^1.3.0",
+    "vite": "4.4.9",
+    "vite-plugin-node-polyfills": "0.14.1",
+    "vite-plugin-svgr": "4.0.0",
+    "vite-tsconfig-paths": "4.2.1"
   }
 }

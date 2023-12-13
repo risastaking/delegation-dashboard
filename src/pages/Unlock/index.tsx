@@ -1,5 +1,3 @@
-
-
 import { WebWalletLoginButton } from '@multiversx/sdk-dapp/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
 import {WalletConnectLoginButton, ExtensionLoginButton, LedgerLoginButton } from '@multiversx/sdk-dapp/UI'
 
@@ -26,32 +24,28 @@ const Unlock = () => {
   useGlobalData();
 
   const connects: Array<ConnectionType | null> = [
+    {
+      name: 'xPortal App',
+      background: '#000000',
+      icon: XPortal,
+      component: WalletConnectLoginButton
+    },
     isChromeDesktop
       ? {
-          title: 'Browser',
-          name: 'MultiversX DeFi Wallet',
+          name: 'Browser Extension',
           background: '#000000',
           icon: XLogo,
           component: ExtensionLoginButton
         }
       : null,
     {
-      title: 'Mobile',
-      name: 'xPortal Mobile Wallet',
-      background: '#000000',
-      icon: XPortal,
-      component: WalletConnectLoginButton
-    },
-    {
-      title: 'Desktop',
-      name: 'MultiversX Web Wallet',
+      name: 'Web Wallet',
       background: '#000000',
       icon: XLogo,
       component: WebWalletLoginButton
     },
     {
-      title: 'Hardware',
-      name: 'Ledger Hardware Wallet',
+      name: 'Ledger',
       background: '#000000',
       icon: Ledger,
       component: LedgerLoginButton
