@@ -147,6 +147,7 @@ const Unlock = () => {
                         key={connect.name}
                         callbackRoute='/dashboard'
                         logoutRoute='/unlock'
+                        nativeAuth
                         isWalletConnectV2
                       >
                         <span className={styles.connect}>
