@@ -14,9 +14,8 @@
     "build-testnet": "yarn copy-testnet-config && yarn build",
     "build-mainnet": "yarn copy-mainnet-config && yarn build",
     "test": "node scripts/test.js",
-    "copy-wasm": "mkdir dist && cp ./public/bls_c.wasm ./dist && cp ./public/.htaccess ./dist && cp ./public/_redirects ./dist",
-    "copy-testnet-config": "yarn copy-wasm && cp ./src/config.testnet.ts ./src/config.ts",
-    "copy-mainnet-config": "yarn copy-wasm && cp ./src/config.mainnet.ts ./src/config.ts",
+    "copy-testnet-config": "cp ./src/config.testnet.ts ./src/config.ts",
+    "copy-mainnet-config": "cp ./src/config.mainnet.ts ./src/config.ts",
     "clean": "rm -rf ./dist",
     "lint": "eslint --ext js,ts,tsx src --fix"
   },
