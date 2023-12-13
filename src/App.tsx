@@ -18,7 +18,8 @@ const App = () => (
     <AxiosInterceptorContext.Interceptor
       // todo: fix Domanis typo when new sdk-dapp is released
       authenticatedDomanis={[network.apiAddress,
-      network.gatewayAddress]}
+      network.gatewayAddress,
+        'https://internal-api.multiversx.com']}
     >
       <Router>
         <DappProvider
