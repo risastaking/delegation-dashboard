@@ -63,7 +63,6 @@ const useRisaContract = () => {
       .unstake([amount])
       .withNonce(account?.nonce)
       .withValue('0')
-      .withGasLimit(250000000)
       .withChainID(chainID.valueOf())
       .buildTransaction()
       .toSendable();
@@ -79,7 +78,6 @@ const useRisaContract = () => {
       .restake()
       .withNonce(account?.nonce)
       .withValue('0')
-      .withGasLimit(250000000)
       .withChainID(chainID.valueOf())
       .buildTransaction()
       .toSendable();
@@ -96,7 +94,6 @@ const useRisaContract = () => {
       .claim()
       .withNonce(account?.nonce)
       .withValue('0')
-      .withGasLimit(250000000)
       .withChainID(chainID.valueOf())
       .buildTransaction()
       .toSendable();

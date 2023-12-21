@@ -2287,9 +2287,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@multiversx/sdk-core@npm:12.15.0":
-  version: 12.15.0
-  resolution: "@multiversx/sdk-core@npm:12.15.0"
+"@multiversx/sdk-core@npm:12.17.0":
+  version: 12.17.0
+  resolution: "@multiversx/sdk-core@npm:12.17.0"
   dependencies:
     "@multiversx/sdk-transaction-decoder": 1.0.2
     bech32: 1.1.4
@@ -2299,7 +2299,7 @@ __metadata:
     json-duplicate-key-handle: 1.0.0
     keccak: 3.0.2
     protobufjs: 7.2.4
-  checksum: 89315f99c4be3f86600e3d5de45638e45bfb49a3a34661c3174f2ec6762a765057fff936e34be0f6e56af43cf9f6e6f7e2571ccf8b40970d1313e94789706756
+  checksum: 3a6e63f30cde1e51814834d7e8651d4839a661f4a75f7fd37978b4250eaa75273c84ef10b435b4bf6c328a52275b50cb6eaa960a48212227445477990e8ad105
   languageName: node
   linkType: hard
 
@@ -2751,7 +2751,7 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": ^6.4.2
     "@fortawesome/react-fontawesome": ^0.2.0
     "@ledgerhq/devices": 8.2.0
-    "@multiversx/sdk-core": 12.15.0
+    "@multiversx/sdk-core": 12.17.0
     "@multiversx/sdk-dapp": 2.24.4
     "@multiversx/sdk-network-providers": 2.2.0
     "@multiversx/sdk-wallet": 4.2.0
