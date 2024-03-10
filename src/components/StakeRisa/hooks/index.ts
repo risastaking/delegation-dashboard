@@ -71,7 +71,7 @@ const useStakeData = () => {
         .stake()
         .withSingleESDTTransfer(tokenPayment)
         .withNonce(account?.nonce)
-        .withGasLimit(10000000)
+        .withGasLimit(600000000)
         .withChainID(chainID)
         .buildTransaction()
         .toSendable();
